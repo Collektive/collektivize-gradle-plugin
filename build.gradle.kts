@@ -4,7 +4,6 @@ import org.apache.tools.ant.taskdefs.condition.Os
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 import org.jetbrains.kotlin.config.KotlinCompilerVersion.VERSION as KOTLIN_VERSION
 
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     `java-gradle-plugin`
     alias(libs.plugins.dokka)
@@ -21,16 +20,16 @@ plugins {
 /*
  * Project information
  */
-group = "org.danilopianini"
+group = "it.unibo.collektive"
 description = "A template repository for kickstarting Gradle Plugins"
 
 inner class ProjectInfo {
-    val longName = "Template for Gradle Plugins"
-    val website = "https://github.com/DanySK/$name"
+    val longName = "collektivize-gradle-plugin"
+    val website = "https://github.com/collektive/$name"
     val vcsUrl = "$website.git"
     val scm = "scm:git:$website.git"
     val pluginImplementationClass = "$group.template.HelloGradle"
-    val tags = listOf("template", "kickstart", "example")
+    val tags = listOf("codegen", "collektive", "kotlin")
 }
 val info = ProjectInfo()
 
@@ -111,23 +110,19 @@ signing {
  * Publication on Maven Central and the Plugin portal
  */
 publishOnCentral {
-    projectLongName.set(info.longName)
-    projectDescription.set(description ?: TODO("Missing description"))
-    projectUrl.set(info.website)
-    scmConnection.set(info.scm)
-    repository("https://maven.pkg.github.com/DanySK/${rootProject.name}".lowercase(), name = "github") {
-        user.set("danysk")
-        password.set(System.getenv("GITHUB_TOKEN"))
-    }
+    projectLongName = info.longName
+    projectDescription = description ?: TODO("Missing description")
+    projectUrl = info.website
+    scmConnection = info.scm
     publishing {
         publications {
             withType<MavenPublication> {
                 pom {
                     developers {
                         developer {
-                            name.set("Danilo Pianini")
-                            email.set("danilo.pianini@gmail.com")
-                            url.set("http://www.danilopianini.org/")
+                            name = "Nicolas Farabegoli"
+                            email = "nicolas.farabegoli@gmail.com"
+                            url = "https://www.nicolasfarabegoli.it/"
                         }
                     }
                 }
@@ -138,14 +133,14 @@ publishOnCentral {
 
 gradlePlugin {
     plugins {
-        website.set(info.website)
-        vcsUrl.set(info.vcsUrl)
+        website = info.website
+        vcsUrl = info.vcsUrl
         create("") {
             id = "$group.${project.name}"
             displayName = info.longName
             description = project.description
             implementationClass = info.pluginImplementationClass
-            tags.set(info.tags)
+            tags = info.tags
         }
     }
 }
