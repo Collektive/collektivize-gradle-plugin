@@ -1,6 +1,9 @@
+import kotlin.io.path.createTempDirectory
+
 plugins {
-    id("org.danilopianini.template-for-gradle-plugins")
+    id("it.unibo.collektive.collektivize-gradle-plugin")
 }
-hello {
-    author.set("Danilo Pianini")
+
+collektivize {
+    outputDirectory.set(createTempDirectory().toFile())
 }

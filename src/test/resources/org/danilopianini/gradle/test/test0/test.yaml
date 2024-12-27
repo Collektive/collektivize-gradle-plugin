@@ -1,7 +1,7 @@
 tests:
-  - description: "A greeting should get printed"
+  - description: "The plugin should generate kotlin code"
     configuration:
-      tasks: hello
+      tasks: collektivizeKotlinStdlib
     expectation:
-      output_contains: "Hello from Danilo Pianini"
-      success: hello
+      output_contains: "Fielded members generated successfully."
+      success: collektivizeKotlinStdlib
