@@ -135,7 +135,7 @@ gradlePlugin {
     plugins {
         website = info.website
         vcsUrl = info.vcsUrl
-        create("collektivize-gradle-plugin") {
+        create("") {
             id = "$group.${project.name}"
             displayName = info.longName
             description = project.description
