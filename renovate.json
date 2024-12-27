@@ -1,6 +1,15 @@
 {
    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
    "extends": [
-      "github>DanySK/renovate-config:gradle-plugin"
+      "github>collektive/renovate-config:gradle-plugin"
+   ],
+   "packageRules": [
+      {
+         "description": "A Collektivize update triggers a release",
+         "matchPackageNames": [
+            "it.unibo.collektive:collektivize"
+         ],
+         "semanticCommitType": "core-deps"
+      }
    ]
 }
