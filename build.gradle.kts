@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 import org.apache.tools.ant.taskdefs.condition.Os
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 import org.jetbrains.kotlin.config.KotlinCompilerVersion.VERSION as KOTLIN_VERSION
@@ -28,7 +26,7 @@ inner class ProjectInfo {
     val website = "https://github.com/collektive/$name"
     val vcsUrl = "$website.git"
     val scm = "scm:git:$website.git"
-    val pluginImplementationClass = "$group.template.HelloGradle"
+    val pluginImplementationClass = "$group.collektivize.CollektivizeGradlePlugin"
     val tags = listOf("codegen", "collektive", "kotlin")
 }
 val info = ProjectInfo()
@@ -49,6 +47,8 @@ dependencies {
     api(gradleApi())
     api(gradleKotlinDsl())
     api(kotlin("stdlib-jdk8"))
+    api(libs.kotlinpoet)
+    implementation(libs.collektivize)
     testImplementation(gradleTestKit())
     testImplementation(libs.konf.yaml)
     testImplementation(libs.classgraph)
@@ -135,7 +135,7 @@ gradlePlugin {
     plugins {
         website = info.website
         vcsUrl = info.vcsUrl
-        create("") {
+        create("collektivize-gradle-plugin") {
             id = "$group.${project.name}"
             displayName = info.longName
             description = project.description
