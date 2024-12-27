@@ -1,3 +1,27 @@
+## 1.0.0 (2024-12-27)
+
+### Features
+
+* implement codegen via gradle plugin ([d0e533a](https://github.com/Collektive/collektivize-gradle-plugin/commit/d0e533aca4e67b07e885d256114e0fbb60e956ec))
+
+### Dependency updates
+
+* **deps:** update plugin multijvmtesting to v3.1.1 ([ade0585](https://github.com/Collektive/collektivize-gradle-plugin/commit/ade05856318b6b54026f69aa32212d75fc7613a7))
+
+### Tests
+
+* minimal test for the plugin ([1fa8a87](https://github.com/Collektive/collektivize-gradle-plugin/commit/1fa8a87a90412f89cfd605a4e1119eb4c1d26867))
+
+### Build and continuous integration
+
+* add collektivize depenendecy ([f580527](https://github.com/Collektive/collektivize-gradle-plugin/commit/f580527ddcba3576a2519fdd5e3036ef800c3ea3))
+* ignore .idea folder ([7f2d116](https://github.com/Collektive/collektivize-gradle-plugin/commit/7f2d116de8788a3388f1db95a01e40278d590d95))
+* remove .idea folder ([318fb4d](https://github.com/Collektive/collektivize-gradle-plugin/commit/318fb4df6d75272e5ba05b628631579214efc1db))
+* remove name ([c553454](https://github.com/Collektive/collektivize-gradle-plugin/commit/c55345412b73b631a647b93c109114867661d87d))
+* setup build info ([07274b9](https://github.com/Collektive/collektivize-gradle-plugin/commit/07274b99f6c89a181dcc0c36673af3c3b62b5c73))
+* trigger a release when collektivize is updated ([caef652](https://github.com/Collektive/collektivize-gradle-plugin/commit/caef65234d1d8b422d1c4a9b452e54c997d69568))
+* use proper secrets name ([bda8ba0](https://github.com/Collektive/collektivize-gradle-plugin/commit/bda8ba02a974bf3caa2aadb3563ac6d6f1905613))
+
 ## [2.0.21](https://github.com/DanySK/template-for-gradle-plugins/compare/2.0.20...2.0.21) (2024-12-20)
 
 ### Dependency updates
