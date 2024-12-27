@@ -1,26 +1,32 @@
-package it.unibo.collektive
+package it.unibo.collektive.collektivize
 
+import it.unibo.collektive.collektivize.FieldedMembersGenerator.baseExtensions
+import it.unibo.collektive.collektivize.FieldedMembersGenerator.baseTargetTypes
 import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.model.ObjectFactory
+import org.gradle.api.provider.ListProperty
 import org.gradle.api.provider.Property
-import org.gradle.api.provider.Provider
-import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.kotlin.dsl.create
+import org.gradle.kotlin.dsl.listProperty
 import org.gradle.kotlin.dsl.property
 import org.gradle.kotlin.dsl.register
+import java.io.File
+import kotlin.reflect.KClass
 
 /**
  * Just a template.
  */
 open class CollektivizeGradlePlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        val extension = target.extensions.create<HelloExtension>("hello")
-        target.tasks.register<HelloTask>("hello") {
-            author.set(extension.author)
+        val extension = target.extensions.create<CollektivizeExtension>("collektivize")
+        target.tasks.register<CollektivizeTask>("collektivizeKotlinStdlib") {
+            typesToField.set(extension.typesToField.get() + extension.extensionsToField.get())
+            outputDirectory.set(extension.outputDirectory.get())
         }
     }
 }
@@ -28,36 +34,60 @@ open class CollektivizeGradlePlugin : Plugin<Project> {
 /**
  * Just a template.
  */
-open class HelloTask : DefaultTask() {
+open class CollektivizeTask : DefaultTask() {
     /**
-     * Just a template.
-     */
-    @Input
-    val author: Property<String> = project.objects.property()
-
-    /**
-     * Read-only property calculated from the greeting.
+     * All the types that should be "fielded".
      */
     @Internal
-    val message: Provider<String> = author.map { "Hello from $it" }
+    val typesToField: ListProperty<KClass<*>> = project.objects.listProperty()
 
     /**
-     * Just a template.
+     * Output directory for the generated code.
+     */
+    @OutputDirectory
+    val outputDirectory: Property<File> = project.objects.property()
+
+    /**
+     * Code generation task.
      */
     @TaskAction
-    fun printMessage() {
-        logger.quiet(message.get())
+    fun collektivize() {
+        val result =
+            runCatching {
+                FieldedMembersGenerator
+                    .generateFieldFunctionsForTypes(typesToField.get().asSequence())
+                    .forEach {
+                        val generatedFile = it.writeTo(outputDirectory.get())
+                        logger.debug("Generated file: ${generatedFile.absolutePath}")
+                    }
+            }
+        when {
+            result.isSuccess -> logger.lifecycle("Fielded members generated successfully.")
+            result.isFailure -> logger.error("Fielded members generation failed.", result.exceptionOrNull())
+        }
     }
 }
 
 /**
- * Just a template.
+ * Extension DSL for the plugin.
  */
-open class HelloExtension(
+open class CollektivizeExtension(
     objects: ObjectFactory,
 ) {
     /**
-     * Just a template.
+     * The types that should be "fielded".
      */
-    val author: Property<String> = objects.property()
+    val typesToField: ListProperty<KClass<*>> =
+        objects.listProperty<KClass<*>>().convention(baseTargetTypes.toList())
+
+    /**
+     * Base class to inspect for "fielding" extensions.
+     */
+    val extensionsToField: ListProperty<KClass<*>> =
+        objects.listProperty<KClass<*>>().convention(baseExtensions.toList())
+
+    /**
+     * Output directory for the generated code.
+     */
+    val outputDirectory: Property<File> = objects.property<File>()
 }
