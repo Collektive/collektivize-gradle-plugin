@@ -1,3 +1,17 @@
+## [1.0.1](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.0...1.0.1) (2024-12-28)
+
+### Dependency updates
+
+* **deps:** update plugin multijvmtesting to v3.1.2 ([#5](https://github.com/Collektive/collektivize-gradle-plugin/issues/5)) ([491dfd0](https://github.com/Collektive/collektivize-gradle-plugin/commit/491dfd0633e77c38bfa6c3c8174e1d673ea1e1e7))
+
+### Documentation
+
+* write appropriate kdoc to each class ([fa68627](https://github.com/Collektive/collektivize-gradle-plugin/commit/fa686273908593a50861b7e47001f81540fee018))
+
+### Build and continuous integration
+
+* use appropriate project description ([478e394](https://github.com/Collektive/collektivize-gradle-plugin/commit/478e394c410dabd57a9f722f1402802081e1ed75))
+
 ## 1.0.0 (2024-12-27)
 
 ### Features
