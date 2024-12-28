@@ -19,7 +19,7 @@ import java.io.File
 import kotlin.reflect.KClass
 
 /**
- * Just a template.
+ * Collekivize Gradle plugin.
  */
 open class CollektivizeGradlePlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -32,7 +32,8 @@ open class CollektivizeGradlePlugin : Plugin<Project> {
 }
 
 /**
- * Just a template.
+ * Code generation task generating "fielded" version for each [typesToField] members.
+ * The generated code is written to [outputDirectory].
  */
 open class CollektivizeTask : DefaultTask() {
     /**
