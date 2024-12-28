@@ -19,7 +19,7 @@ plugins {
  * Project information
  */
 group = "it.unibo.collektive"
-description = "A template repository for kickstarting Gradle Plugins"
+description = "Code generator for collektivize kotlin types"
 
 inner class ProjectInfo {
     val longName = "collektivize-gradle-plugin"
