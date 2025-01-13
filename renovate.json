@@ -9,7 +9,7 @@
          "matchPackageNames": [
             "it.unibo.collektive:collektivize"
          ],
-         "semanticCommitType": "core-deps"
+         "semanticCommitScope": "core-deps"
       }
    ]
 }
