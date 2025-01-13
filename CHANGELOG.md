@@ -1,3 +1,19 @@
+## [1.0.2](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.1...1.0.2) (2025-01-13)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#8](https://github.com/Collektive/collektivize-gradle-plugin/issues/8)) ([8add8de](https://github.com/Collektive/collektivize-gradle-plugin/commit/8add8de684dd0d76d9b6b7d69b4433eb75cb04fd))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#10](https://github.com/Collektive/collektivize-gradle-plugin/issues/10)) ([a818713](https://github.com/Collektive/collektivize-gradle-plugin/commit/a818713ba8dc9c3c8defaba4f8e7aeea5f544368))
+* **deps:** update node.js to 22.13 ([#6](https://github.com/Collektive/collektivize-gradle-plugin/issues/6)) ([1aea0b3](https://github.com/Collektive/collektivize-gradle-plugin/commit/1aea0b3a986be763a65e6dd010797603cacebce5))
+
+### Bug Fixes
+
+* change renovate config from type to scope ([5ccd5d9](https://github.com/Collektive/collektivize-gradle-plugin/commit/5ccd5d9d08624d508b063490c519821bfecf50ee))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.0 ([#9](https://github.com/Collektive/collektivize-gradle-plugin/issues/9)) ([9706a67](https://github.com/Collektive/collektivize-gradle-plugin/commit/9706a67c3927e70896043ca393a2dee2b12bc8ed))
+
 ## [1.0.1](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.0...1.0.1) (2024-12-28)
 
 ### Dependency updates
