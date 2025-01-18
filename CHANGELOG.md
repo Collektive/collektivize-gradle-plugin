@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.2...1.0.3) (2025-01-18)
+
+### Dependency updates
+
+* **core-deps:** update dependency it.unibo.collektive:collektivize to v1.0.2 ([#12](https://github.com/Collektive/collektivize-gradle-plugin/issues/12)) ([c48e8a7](https://github.com/Collektive/collektivize-gradle-plugin/commit/c48e8a7da295d10ef6b8bf38bbce439b6124b3b1))
+
 ## [1.0.2](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.1...1.0.2) (2025-01-13)
 
 ### Dependency updates
