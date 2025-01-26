@@ -1,3 +1,16 @@
+## [1.0.7](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.6...1.0.7) (2025-01-26)
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v8.12.1 ([#20](https://github.com/Collektive/collektivize-gradle-plugin/issues/20)) ([ab7c10b](https://github.com/Collektive/collektivize-gradle-plugin/commit/ab7c10b77946da8ce1ccfb65a461e4c0814921db))
+* **deps:** update plugin com.gradle.develocity to v3.19.1 ([#17](https://github.com/Collektive/collektivize-gradle-plugin/issues/17)) ([fba97ed](https://github.com/Collektive/collektivize-gradle-plugin/commit/fba97edeceebc3ec84ae009037a5ae8d5068b39d))
+* **deps:** update plugin multijvmtesting to v3.2.0 ([#19](https://github.com/Collektive/collektivize-gradle-plugin/issues/19)) ([d6252d6](https://github.com/Collektive/collektivize-gradle-plugin/commit/d6252d6efe7cefb0ba578ce2a05b2c05727eb41f))
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.1 ([#16](https://github.com/Collektive/collektivize-gradle-plugin/issues/16)) ([7c8a2d2](https://github.com/Collektive/collektivize-gradle-plugin/commit/7c8a2d2016d64f43317b24a4be8e53315279f751))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v3.7.2 ([#18](https://github.com/Collektive/collektivize-gradle-plugin/issues/18)) ([b9eeea9](https://github.com/Collektive/collektivize-gradle-plugin/commit/b9eeea95ba417bba1c91548ad1651c3443e7f1eb))
+
 ## [1.0.6](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.5...1.0.6) (2025-01-21)
 
 ### Dependency updates
