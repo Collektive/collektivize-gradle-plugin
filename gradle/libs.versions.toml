@@ -5,7 +5,7 @@ kotest = "5.9.1"
 kotlin = "2.1.0"
 
 [libraries]
-collektivize = "it.unibo.collektive:collektivize:1.0.5"
+collektivize = "it.unibo.collektive:collektivize:1.0.6"
 classgraph = "io.github.classgraph:classgraph:4.8.179"
 konf-yaml = { module = "com.uchuhimo:konf-yaml", version.ref = "konf" }
 kotest-junit5-jvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
