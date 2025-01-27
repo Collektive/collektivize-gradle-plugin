@@ -1,3 +1,12 @@
+## [1.0.8](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.7...1.0.8) (2025-01-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency it.unibo.collektive:collektivize to v1.0.6 ([#25](https://github.com/Collektive/collektivize-gradle-plugin/issues/25)) ([52a456b](https://github.com/Collektive/collektivize-gradle-plugin/commit/52a456b05903d1fa47309862b7395dc78128d563))
+* **deps:** update plugin gitsemver to v3.1.8 ([#24](https://github.com/Collektive/collektivize-gradle-plugin/issues/24)) ([2339b7a](https://github.com/Collektive/collektivize-gradle-plugin/commit/2339b7a1d553ea435c01f7e6704aeb501d7bb111))
+* **deps:** update plugin multijvmtesting to v3.2.1 ([#21](https://github.com/Collektive/collektivize-gradle-plugin/issues/21)) ([1a3b418](https://github.com/Collektive/collektivize-gradle-plugin/commit/1a3b418ba4d663bd0f34b7dfc657f4988a085343))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.19 ([#22](https://github.com/Collektive/collektivize-gradle-plugin/issues/22)) ([651c329](https://github.com/Collektive/collektivize-gradle-plugin/commit/651c329d530fcd9a1b5a4d9cfb8a3e00d4f271ce))
+
 ## [1.0.7](https://github.com/Collektive/collektivize-gradle-plugin/compare/1.0.6...1.0.7) (2025-01-26)
 
 ### Dependency updates
